@@ -2,15 +2,19 @@
   "name": "ts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.ts",
   "scripts": {
-    "start:dev": "nodemon"
+    "start:dev": "nodemon",
+    "check": "tsc",
+    "build": "rimraf ./build && tsc",
+    "build:start": "npm run build && node build/app.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
   },
